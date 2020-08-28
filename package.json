@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./react_django_redux/frontend/src/index.js --output ./react_django_redux/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./react_django_redux/frontend/src/index.js --output ./react_django_redux/frontend/static/frontend/main.js"
+    "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output .frontend/static/frontend/main.js"
   },
   "keywords": [],
   "author": "",
@@ -32,5 +32,8 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
+  },
+  "engines": {
+    "node": "12.18.2"
   }
 }
