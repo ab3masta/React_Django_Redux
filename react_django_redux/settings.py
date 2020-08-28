@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'y5lku=$yxcr&gmd&34el4ie!h(1ug2f3(*h%^qmzs!$$(yltpl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #'djangoreact-redux.herokuapp.com'
 ALLOWED_HOSTS = ['djangoreact-redux.herokuapp.com']
 
@@ -128,3 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
