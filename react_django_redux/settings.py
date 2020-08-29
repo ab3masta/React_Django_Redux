@@ -24,8 +24,8 @@ SECRET_KEY = 'y5lku=$yxcr&gmd&34el4ie!h(1ug2f3(*h%^qmzs!$$(yltpl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-#'djangoreact-redux.herokuapp.com'
-ALLOWED_HOSTS = ['djangoreact-redux.herokuapp.com']
+# 'djangoreact-redux.herokuapp.com'
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -55,7 +55,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
 ROOT_URLCONF = 'react_django_redux.urls'
 
 TEMPLATES = [
@@ -131,5 +135,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'frontend/static/frontend'),
+    os.path.join(BASE_DIR, 'frontend/static/frontend'),
 )
