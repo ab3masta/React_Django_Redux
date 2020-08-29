@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'y5lku=$yxcr&gmd&34el4ie!h(1ug2f3(*h%^qmzs!$$(yltpl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #'djangoreact-redux.herokuapp.com'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoreact-redux.herokuapp.com']
 
 # Application definition
 
