@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['djangoreact-redux.herokuapp.com']
 
 # Application definition
-#  'whitenoise.runserver_nostatic',
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'leads',
     'accounts',
     'rest_framework',
@@ -48,6 +49,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -126,8 +128,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
