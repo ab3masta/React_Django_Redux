@@ -25,6 +25,9 @@ sqlparse = "==0.3.1"
 toml = "==0.10.1"
 whitenoise = "==5.2.0"
 Django = "==3.1"
+pyjwt = "*"
+djangorestframework-jwt = "*"
+drf-yasg = "*"
 
 [requires]
 python_version = "3.8"
